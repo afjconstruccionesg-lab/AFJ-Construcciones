@@ -1,3 +1,4 @@
+/* AFJ-CSS-VERSION: FIX-TARJETAS-V2 (altura fija 560px en .service-card Y .service-card__inner) */
 /* =========================================================
    TOKENS
    ========================================================= */
@@ -315,7 +316,6 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
   overflow:hidden;
 }
 .service-card__front{
-  position:relative;
   background: rgba(10,10,10,0.72);
   border: 1px solid var(--rojo);
 }
@@ -696,7 +696,7 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
   .hero{ padding-top: 140px; }
   .hero__cta{ flex-direction:column; }
   .hero__cta .btn{ width:100%; justify-content:center; }
-  .services__grid{ grid-template-columns: 1fr 1fr; }
+  .services__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
   .service-card, .service-card__inner{ height: 480px; width: 100%; }
   .services .section-head h2{ white-space: normal; font-size: 1.6rem; }
 }
@@ -773,4 +773,87 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
 @media (max-width: 520px){
   .wa-float{ right: 16px; bottom: 16px; }
   .wa-float__btn{ width: 54px; height: 54px; }
+}
+
+/* =========================================================
+   MODO MOBILE (≤640px)
+   - Ficha técnica de servicios → carrusel horizontal (swipe)
+   - Obras realizadas → carrusel horizontal (swipe)
+   - Ajustes generales de espaciado y tipografía
+   ========================================================= */
+@media (max-width: 640px){
+
+  /* ---------- HERO ---------- */
+  .hero{ padding: 116px 0 56px; min-height: auto; }
+  .hero .container{ padding-left: 20px; padding-right: 20px; }
+  .hero__title{ padding: 24px 0; margin-bottom: 18px; }
+  .hero__subtitle{ font-size: 1.02rem; margin-bottom: 28px; }
+  .hero__cta{ margin-bottom: 44px; }
+  .hero__stats{ gap: 28px 36px; padding-top: 20px; }
+  .hero__stat dt{ font-size: 1.6rem; }
+
+  /* ---------- ENCABEZADOS DE SECCIÓN ---------- */
+  .section-head{ margin-bottom: 36px; }
+  .section-head p{ font-size: 0.95rem; }
+
+  /* ---------- FICHA TÉCNICA DE SERVICIOS → CARRUSEL ---------- */
+  .services{ padding: 64px 0; }
+  .services .container{ padding-left: 0; padding-right: 0; }
+  .services .section-head{ padding: 0 20px; }
+  .services .section-head h2{ white-space: normal; font-size: 1.5rem; }
+
+  .services__grid{
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding: 4px 20px 12px;
+  }
+  .services__grid::-webkit-scrollbar{ display: none; }
+
+  .service-card,
+  .service-card__inner{ height: 440px; }
+  .service-card{
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
+
+  /* ---------- OBRAS REALIZADAS → CARRUSEL ---------- */
+  .projects{ padding: 64px 0; }
+  .projects .container{ padding-left: 0; padding-right: 0; }
+  .projects .section-head{ padding: 0 20px; }
+
+  .projects__grid{
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 20px;
+    padding: 4px 20px 12px;
+    max-width: none;
+  }
+  .projects__grid::-webkit-scrollbar{ display: none; }
+
+  .project-card{
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  /* ---------- TESTIMONIOS ---------- */
+  .testimonials{ padding: 64px 0; }
+  .testimonials__grid{ gap: 24px; }
+
+  /* ---------- CONTACTO ---------- */
+  .contact{ padding: 64px 0; }
+  .contact__inner{ gap: 40px; }
+  .contact__form{ padding: 28px 20px; }
+
+  /* ---------- FOOTER ---------- */
+  .footer{ padding: 44px 0 24px; }
+  .footer__inner{ gap: 28px; }
 }
