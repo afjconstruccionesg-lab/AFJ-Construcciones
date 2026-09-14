@@ -288,7 +288,14 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
   gap: 16px;
 }
 
-.service-card{ perspective: 1400px; cursor: pointer; outline: none; height: 560px; box-sizing: border-box; }
+.service-card{
+  perspective: 1400px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 560px;
+  box-sizing: border-box;
+}
 .service-card__inner{
   position: relative;
   width: 100%;
@@ -344,11 +351,12 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
 .service-card__dim{ color: #ccc; font-weight: 700; }
 .service-card__front h3{
   font-family: var(--f-display);
-  font-size: 1.55rem;
+  font-size: 1.08rem;
   text-transform: uppercase;
   margin-bottom: 14px;
   color: var(--blanco);
-  line-height: 1.15;
+  line-height: 1.2;
+  overflow-wrap: break-word;
 }
 .service-card__front p{ color: #e5e5e0; font-size: 1rem; line-height:1.55; flex-grow:1; }
 .service-card__hint{
@@ -360,11 +368,12 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
 }
 .service-card__back h4{
   font-family: var(--f-display);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--blanco);
   margin-bottom: 16px;
-  line-height: 1.2;
+  line-height: 1.25;
+  overflow-wrap: break-word;
 }
 .service-card__back ul{
   list-style: none;
@@ -688,7 +697,7 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
   .hero__cta{ flex-direction:column; }
   .hero__cta .btn{ width:100%; justify-content:center; }
   .services__grid{ grid-template-columns: 1fr 1fr; }
-  .service-card, .service-card__inner{ height: 480px; }
+  .service-card, .service-card__inner{ height: 480px; width: 100%; }
   .services .section-head h2{ white-space: normal; font-size: 1.6rem; }
 }
 
