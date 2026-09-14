@@ -139,4 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.addEventListener('mouseleave', startInterval);
   });
 
+  // Fichas de servicios: voltear al hacer click o con Enter/Espacio
+  document.querySelectorAll('.service-card').forEach((card) => {
+    card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('is-flipped');
+      }
+    });
+  });
+
 });
