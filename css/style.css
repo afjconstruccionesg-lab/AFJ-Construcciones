@@ -786,7 +786,7 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
 
   /* ---------- HERO ---------- */
   .hero{
-    padding: 116px 0 320px;
+    padding: 116px 0 260px;
     min-height: auto;
     background: #FFFFFF url('../images/hero-obra-mobile.png') no-repeat center bottom / contain;
   }
@@ -800,7 +800,7 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
     max-width: 560px;
     margin-bottom: 28px;
   }
-  .hero__cta{ margin-bottom: 24px; }
+  .hero__cta{ margin-bottom: 0; }
   .hero__stats{ display: none; }
 
   /* ---------- ENCABEZADOS DE SECCIÓN ---------- */
