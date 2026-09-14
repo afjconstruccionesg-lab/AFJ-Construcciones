@@ -206,6 +206,7 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
   margin-bottom: 64px;
 }
 
+.hero__subtitle--mobile{ display: none; }
 .hero__stats{
   display:flex;
   gap: 48px;
@@ -784,13 +785,23 @@ input,textarea,select{ font-family:inherit; font-size:1rem; }
 @media (max-width: 640px){
 
   /* ---------- HERO ---------- */
-  .hero{ padding: 116px 0 56px; min-height: auto; }
+  .hero{
+    padding: 116px 0 320px;
+    min-height: auto;
+    background: #FFFFFF url('../images/hero-obra-mobile.png') no-repeat center bottom / contain;
+  }
   .hero .container{ padding-left: 20px; padding-right: 20px; }
   .hero__title{ padding: 24px 0; margin-bottom: 18px; }
-  .hero__subtitle{ font-size: 1.02rem; margin-bottom: 28px; }
-  .hero__cta{ margin-bottom: 44px; }
-  .hero__stats{ gap: 28px 36px; padding-top: 20px; }
-  .hero__stat dt{ font-size: 1.6rem; }
+  .hero__subtitle{ display: none; }
+  .hero__subtitle--mobile{
+    display: block;
+    font-size: 1.02rem;
+    color: #333;
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+  .hero__cta{ margin-bottom: 24px; }
+  .hero__stats{ display: none; }
 
   /* ---------- ENCABEZADOS DE SECCIÓN ---------- */
   .section-head{ margin-bottom: 36px; }
