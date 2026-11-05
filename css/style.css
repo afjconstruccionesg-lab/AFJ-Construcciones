@@ -1163,14 +1163,19 @@ h1,h2,h3,h4{ font-weight:500; letter-spacing:.01em; }
 }
 
 /* ===== Cinta rodante ===== */
-.marquee{ overflow:hidden; background:linear-gradient(90deg,var(--acento-osc),var(--acento)); padding:20px 0; }
-.marquee__track{ display:flex; width:max-content; align-items:center; animation:mq 40s linear infinite; }
-.marquee:hover .marquee__track{ animation-play-state:paused; }
-@keyframes mq{ to{ transform:translateX(-25%); } }
-.marquee span{ color:#fff; font-weight:500; font-size:1.25rem; letter-spacing:.14em; text-transform:uppercase; padding:0 30px; white-space:nowrap; }
-.marquee i{ width:10px; height:10px; background:#fff; transform:rotate(45deg); border-radius:2px; opacity:.7; flex:none; }
-@media (max-width:640px){ .marquee span{ font-size:1rem; padding:0 20px; } .marquee__track{ animation-duration:28s; } }
-@media (prefers-reduced-motion:reduce){ .marquee__track{ animation:none; } }
+.marquee{ overflow:hidden; background:var(--celeste); padding:22px 0; }
+.marquee__track{ display:flex; width:max-content; align-items:center; animation:mq 38s linear infinite; }
+@keyframes mq{ to{ transform:translateX(-33.3333%); } }
+.marquee span{ white-space:nowrap; font-size:3.2rem; line-height:1.1; padding:0 24px; text-transform:uppercase; color:var(--acento-osc); }
+.marquee i{ width:14px; height:14px; border-radius:50%; background:var(--acento); flex:none; }
+.marquee .f1{ font-family:'Bebas Neue',Impact,sans-serif; font-size:3.8rem; letter-spacing:.04em; }
+.marquee .f2{ font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:700; text-transform:none; color:var(--acento); }
+.marquee .f3{ font-family:'Oswald','Roboto Condensed',sans-serif; font-weight:700; color:transparent; -webkit-text-stroke:1.5px var(--acento-osc); }
+.marquee .f4{ font-family:'Roboto Slab',Georgia,serif; font-weight:800; font-size:2.8rem; }
+.marquee .f5{ font-family:'Pacifico',cursive; text-transform:none; font-size:2.8rem; color:var(--acento); }
+.marquee .f6{ font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:.2em; font-size:2.4rem; }
+.marquee .f7{ font-family:Roboto,sans-serif; font-weight:700; color:transparent; -webkit-text-stroke:1.5px var(--acento); }
+@media (max-width:640px){ .marquee span{ font-size:2rem; padding:0 16px; } .marquee .f1{ font-size:2.4rem; } .marquee .f4,.marquee .f5,.marquee .f6{ font-size:1.8rem; } .marquee__track{ animation-duration:26s; } }
 
 /* ===== Transición hero ===== */
 .hero__slide{ transition:opacity 1.3s ease; }
