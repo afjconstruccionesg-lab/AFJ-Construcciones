@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFJ Construcciones Argentina y Venezuela | Obras y Remodelación</title>
-<meta name="description" content="AFJ Construcciones en Argentina y Venezuela: obra nueva, remodelaciones, destapado de cañerías y electricidad. Presupuesto sin cargo. Trabajo garantizado.">
+<meta name="description" content="AFJ Construcciones en Argentina y Venezuela: obra nueva, remodelaciones, plomería y electricidad. Presupuesto sin cargo. Trabajo garantizado.">
 <link rel="canonical" href="https://www.afjconstrucciones.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
@@ -16,7 +16,7 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="AFJ Construcciones">
 <meta property="og:title" content="AFJ Construcciones Argentina y Venezuela | Obras y Remodelación">
-<meta property="og:description" content="Obra nueva, remodelaciones, destapado de cañerías y electricidad en Argentina y Venezuela. Presupuesto sin cargo.">
+<meta property="og:description" content="Obra nueva, remodelaciones, plomería y electricidad en Argentina y Venezuela. Presupuesto sin cargo.">
 <meta property="og:url" content="https://www.afjconstrucciones.com/">
 <meta property="og:image" content="https://www.afjconstrucciones.com/favicon-192.png">
 
@@ -31,10 +31,7 @@
 </script>
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
+<link rel="preload" href="fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,18 +40,19 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="#inicio" class="logo">
-      <img src="images/isologo-negro.png" alt="AFJ Construcciones" class="logo__img">
+      <img src="images/logo-negro-puro.png" alt="AFJ Construcciones" class="logo__img">
     </a>
 
     <nav class="nav" id="nav">
+      <a href="#nosotros">Quiénes somos</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#testimonios">Opiniones</a>
+      <a href="#testimonios">Clientes</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
-    <a href="#contacto" class="btn btn--nav">Pedí tu presupuesto</a>
+    <a href="#contacto" class="btn btn--wa js-wa-open"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.36-.77-1.86-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.42.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29Z"/></svg>Pedí tu presupuesto</a>
 
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -64,43 +62,57 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
+  <div class="hero__slides" aria-hidden="true">
+    <picture class="hero__slide active"><source media="(max-width:640px)" srcset="images/hero-1-m.webp"><img src="images/hero-1.webp" alt="" fetchpriority="high"></picture>
+    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-2-m.webp"><img src="images/hero-2.webp" alt="" loading="lazy"></picture>
+    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-3-m.webp"><img src="images/hero-3.webp" alt="" loading="lazy"></picture>
+    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-4-m.webp"><img src="images/hero-4.webp" alt="" loading="lazy"></picture>
+  </div>
+  <div class="hero__overlay"></div>
   <div class="container hero__inner">
     <div class="hero__eyebrow">
-      <span class="dim-mark">01</span>
-      <span>Construcción · Remodelación · Plomería · Electricidad</span>
+      <span>Construcción · Remodelación · Cielorrasos · Plomería · Electricidad</span>
     </div>
-
-    <h1 class="hero__title">
-      Obras que <span class="text-rojo">se sostienen</span><br>en el tiempo.
-    </h1>
-
+    <h1 class="hero__title">Obras que se sostienen<br>en el tiempo.</h1>
     <p class="hero__subtitle">
-      Hacemos obra nueva, remodelaciones, destapado de cañerías e instalaciones eléctricas
+      Hacemos obra nueva, remodelaciones, cielorrasos, plomería e instalaciones eléctricas
       con la misma precisión con la que se lee un plano: sin improvisar.
     </p>
     <p class="hero__subtitle hero__subtitle--mobile">
-      Obra nueva, remodelaciones, plomería y electricidad. Sin improvisar.
+      Obra nueva, remodelaciones, cielorrasos y electricidad. Sin improvisar.
     </p>
-
     <div class="hero__cta">
-      <a href="#contacto" class="btn btn--primary">Pedí tu presupuesto sin cargo</a>
+      <a href="#contacto" class="btn btn--wa js-wa-open"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.36-.77-1.86-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.42.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29Z"/></svg>Pedí tu presupuesto sin cargo</a>
       <a href="#servicios" class="btn btn--ghost">Ver servicios ↓</a>
     </div>
-
     <dl class="hero__stats">
-      <div class="hero__stat">
-        <dt>+12</dt>
-        <dd>años en el rubro</dd>
-      </div>
-      <div class="hero__stat">
-        <dt>+300</dt>
-        <dd>obras entregadas</dd>
-      </div>
-      <div class="hero__stat">
-        <dt>24 h</dt>
-        <dd>respuesta a urgencias</dd>
-      </div>
+      <div class="hero__stat"><dt>+30</dt><dd>años en el rubro</dd></div>
+      <div class="hero__stat"><dt>+300</dt><dd>obras entregadas</dd></div>
+      <div class="hero__stat"><dt>24 h</dt><dd>respuesta a urgencias</dd></div>
     </dl>
+  </div>
+  <div class="hero__dots" id="heroDots"><span class="active"></span><span></span><span></span><span></span></div>
+</section>
+
+<!-- ============ QUIÉNES SOMOS ============ -->
+<section class="about" id="nosotros">
+  <div class="container">
+    <h2 class="about__title">Quiénes somos</h2>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>AFJ Construcciones es una empresa de construcción y remodelación con sucursales en Argentina y Venezuela. Hace más de 30 años trabajamos en obra nueva, remodelaciones, cielorrasos, plomería, electricidad y mantenimiento.</p>
+        <p>Entregamos cada obra con presupuesto detallado, plazos reales y terminaciones prolijas. Más de 300 obras entregadas respaldan nuestro trabajo.</p>
+        <ul class="checklist">
+          <li>Presupuesto detallado y sin cargo</li>
+          <li>Respuesta a urgencias en 24 horas</li>
+          <li>Garantía por escrito en cada entrega</li>
+          <li>Sucursales en Argentina y Venezuela</li>
+        </ul>
+      </div>
+      <div class="about__photo">
+        <img src="images/cielorraso-9.webp" alt="Cielorraso en drywall terminado por AFJ Construcciones" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -108,33 +120,32 @@
 <section class="services" id="servicios">
   <div class="container">
     <header class="section-head">
-      <span class="section-head__num">02</span>
       <h2>Ficha técnica de servicios</h2>
-      <p>Seis especialidades, un mismo estándar de terminación. Tocá cada ficha para ver el detalle completo.</p>
+      <p>Siete especialidades, un mismo estándar de terminación. Tocá cada ficha para ver el detalle completo.</p>
     </header>
 
     <div class="services__grid">
 
-      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Construcción">
+      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Revestimientos">
         <div class="service-card__inner">
           <div class="service-card__face service-card__front">
             <div class="service-card__head">
               <span class="service-card__code">PLANO N.º 01</span>
-              <span class="service-card__dim">OBRA</span>
+              <span class="service-card__dim">ACABADOS</span>
             </div>
-            <h3>Construcción</h3>
-            <p>Obra nueva de principio a fin: relevamiento, estructura, mampostería y terminaciones, coordinadas con planos claros y plazos reales.</p>
+            <h3>Revestimientos</h3>
+            <p>Colocación prolija de pisos y paredes en cerámica, porcelanato y otros materiales, con alineación y juntas parejas.</p>
             <span class="service-card__hint">Ver detalle ↻</span>
           </div>
           <div class="service-card__face service-card__back">
-            <h4>Construcción</h4>
+            <h4>Revestimientos</h4>
             <ul>
-              <li>Relevamiento y anteproyecto</li>
-              <li>Fundaciones y estructura</li>
-              <li>Mampostería y cubiertas</li>
-              <li>Terminaciones interiores y exteriores</li>
-              <li>Dirección y certificación de obra</li>
-              <li>Ampliaciones y refacciones estructurales</li>
+              <li>Pisos de cerámica y porcelanato</li>
+              <li>Revestimiento de paredes y baños</li>
+              <li>Frentes de cocina y mesadas</li>
+              <li>Zócalos y molduras</li>
+              <li>Preparación y nivelación de superficies</li>
+              <li>Cortes y encuentros con terminación limpia</li>
             </ul>
             <span class="service-card__hint">Volver ↺</span>
           </div>
@@ -167,24 +178,24 @@
         </div>
       </article>
 
-      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Destapado de cañerías">
+      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Plomería">
         <div class="service-card__inner">
           <div class="service-card__face service-card__front">
             <div class="service-card__head">
               <span class="service-card__code">PLANO N.º 03</span>
-              <span class="service-card__dim">URGENCIA</span>
+              <span class="service-card__dim">URGENCIAS</span>
             </div>
-            <h3>Destapado de cañerías</h3>
-            <p>Detección y solución de obstrucciones con equipo especializado, con respuesta rápida cuando no podés esperar.</p>
+            <h3>Plomería</h3>
+            <p>Instalaciones, reparaciones y destapado de cañerías, con cambio de grifería incluido y respuesta rápida cuando no podés esperar.</p>
             <span class="service-card__hint">Ver detalle ↻</span>
           </div>
           <div class="service-card__face service-card__back">
-            <h4>Destapado de cañerías</h4>
+            <h4>Plomería</h4>
             <ul>
-              <li>Destapaciones cloacales y pluviales</li>
-              <li>Video inspección de cañerías</li>
-              <li>Detección de pérdidas ocultas</li>
-              <li>Limpieza de rejillas y desagües</li>
+              <li>Cambio de grifería incluido</li>
+              <li>Destapado de cañerías y desagües</li>
+              <li>Detección y reparación de pérdidas</li>
+              <li>Instalación de artefactos sanitarios</li>
               <li>Guardia para urgencias 24 hs</li>
               <li>Informe técnico post-servicio</li>
             </ul>
@@ -219,19 +230,19 @@
         </div>
       </article>
 
-      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Mantenimiento de piletas">
+      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Piletas y Piscinas">
         <div class="service-card__inner">
           <div class="service-card__face service-card__front">
             <div class="service-card__head">
               <span class="service-card__code">PLANO N.º 05</span>
-              <span class="service-card__dim">MANTENIMIENTO</span>
+              <span class="service-card__dim">PILETAS</span>
             </div>
-            <h3>Piletas</h3>
-            <p>Cuidamos el agua y la estructura de tu pileta durante todo el año, para que esté lista para usar cuando la necesites.</p>
+            <h3>Piletas / Piscinas</h3>
+            <p>Cuidamos el agua y la estructura de tu pileta o piscina durante todo el año, para que esté lista cuando la necesites.</p>
             <span class="service-card__hint">Ver detalle ↻</span>
           </div>
           <div class="service-card__face service-card__back">
-            <h4>Mantenimiento de piletas</h4>
+            <h4>Piletas / Piscinas</h4>
             <ul>
               <li>Limpieza y tratamiento químico del agua</li>
               <li>Reparación de bombas y filtros</li>
@@ -250,7 +261,7 @@
           <div class="service-card__face service-card__front">
             <div class="service-card__head">
               <span class="service-card__code">PLANO N.º 06</span>
-              <span class="service-card__dim">CLIMATIZACIÓN</span>
+              <span class="service-card__dim">CLIMA</span>
             </div>
             <h3>Aire acondicionado</h3>
             <p>Service técnico para equipos split y centrales: limpieza, carga de gas y diagnóstico para que rindan todo el año.</p>
@@ -271,6 +282,33 @@
         </div>
       </article>
 
+
+      <article class="service-card" tabindex="0" role="button" aria-label="Ver detalle de Cielorrasos y Drywall">
+        <div class="service-card__inner">
+          <div class="service-card__face service-card__front">
+            <div class="service-card__head">
+              <span class="service-card__code">PLANO N.º 07</span>
+              <span class="service-card__dim">INTERIORES</span>
+            </div>
+            <h3>Cielorrasos y Drywall</h3>
+            <p>Cielorrasos y tabiques en placa de yeso con estructura metálica, iluminación integrada y terminación lista para pintar.</p>
+            <span class="service-card__hint">Ver detalle ↻</span>
+          </div>
+          <div class="service-card__face service-card__back">
+            <h4>Cielorrasos y Drywall</h4>
+            <ul>
+              <li>Cielorrasos en placa de yeso</li>
+              <li>Estructura metálica y perfilería</li>
+              <li>Iluminación LED perimetral</li>
+              <li>Luces embutidas y spots</li>
+              <li>Tabiques y muebles en drywall</li>
+              <li>Detalles, molduras y terminación</li>
+            </ul>
+            <span class="service-card__hint">Volver ↺</span>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -279,7 +317,6 @@
 <section class="process" id="proceso">
   <div class="container">
     <header class="section-head section-head--light">
-      <span class="section-head__num">03</span>
       <h2>Cómo trabajamos</h2>
       <p>El mismo orden de un plano bien hecho, aplicado a cada obra.</p>
     </header>
@@ -313,12 +350,14 @@
 <section class="projects" id="proyectos">
   <div class="container">
     <header class="section-head">
-      <span class="section-head__num">04</span>
       <h2>Obras realizadas</h2>
-      <p>Mirá el avance de nuestros proyectos paso a paso de forma automática.</p>
+      <p>Mirá el avance de nuestros proyectos paso a paso.</p>
     </header>
 
-    <div class="projects__grid">
+    <div class="projects__slider">
+    <button class="slider-arrow slider-arrow--prev" id="projPrev" aria-label="Obras anteriores">‹</button>
+    <button class="slider-arrow slider-arrow--next" id="projNext" aria-label="Obras siguientes">›</button>
+    <div class="projects__grid" id="projGrid">
       
       <!-- PROYECTO 1: COCINA (6 FOTOS - FORMÁTO .JPEG - SIN TEXTO ENCIMA) -->
       <article class="project-card">
@@ -370,15 +409,15 @@
           <div class="carousel-track">
             <!-- Foto 1 -->
             <div class="carousel-slide active">
-              <img src="images/banio-antes.png" alt="Remodelación de Baño - Paso 1">
+              <img src="images/banio-antes.webp" alt="Remodelación de Baño - Paso 1">
             </div>
             <!-- Foto 2 (Corregido el nombre según tu carpeta de archivos) -->
             <div class="carousel-slide">
-              <img src="images/banio-antes-2.png" alt="Remodelación de Baño - Paso 2">
+              <img src="images/banio-antes-2.webp" alt="Remodelación de Baño - Paso 2">
             </div>
             <!-- Foto 3 -->
             <div class="carousel-slide">
-              <img src="images/banio-despues.png" alt="Remodelación de Baño - Paso 3">
+              <img src="images/banio-despues.webp" alt="Remodelación de Baño - Paso 3">
             </div>
           </div>
           <!-- Indicadores de posición (3 puntitos) -->
@@ -447,29 +486,401 @@
         </figcaption>
       </article>
 
+      <!-- PROYECTO 4: CIELORRASO EN DRYWALL (9 FOTOS) -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="1000">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cielorraso-1.webp" alt="Cielorraso en drywall - Paso 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-2.webp" alt="Cielorraso en drywall - Paso 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-3.webp" alt="Cielorraso en drywall - Paso 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-4.webp" alt="Cielorraso en drywall - Paso 4" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-5.webp" alt="Cielorraso en drywall - Paso 5" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-6.webp" alt="Cielorraso en drywall - Paso 6" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-7.webp" alt="Cielorraso en drywall - Paso 7" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-8.webp" alt="Cielorraso en drywall - Paso 8" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cielorraso-9.webp" alt="Cielorraso en drywall - Paso 9" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Cielorraso en Drywall</h3>
+        </figcaption>
+      </article>
+
+      <!-- LOCAL: Symphony Deli Café -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-symphony-1.webp" alt="Symphony Deli Café - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-symphony-2.webp" alt="Symphony Deli Café - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-symphony-3.webp" alt="Symphony Deli Café - foto 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-symphony-4.webp" alt="Symphony Deli Café - foto 4" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Symphony Deli Café</h3>
+        </figcaption>
+      </article>
+
+      <!-- LOCAL: Moka Deli Café -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-moka-1.webp" alt="Moka Deli Café - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-moka-2.webp" alt="Moka Deli Café - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-moka-3.webp" alt="Moka Deli Café - foto 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-moka-4.webp" alt="Moka Deli Café - foto 4" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-moka-5.webp" alt="Moka Deli Café - foto 5" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-moka-6.webp" alt="Moka Deli Café - foto 6" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Moka Deli Café</h3>
+        </figcaption>
+      </article>
+
+      <!-- LOCAL: Chocolat Deli Café -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-chocolat-1.webp" alt="Chocolat Deli Café - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-chocolat-2.webp" alt="Chocolat Deli Café - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-chocolat-3.webp" alt="Chocolat Deli Café - foto 3" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Chocolat Deli Café</h3>
+        </figcaption>
+      </article>
+
+      <!-- LOCAL: Panadería Vollmer -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-vollmer-1.webp" alt="Panadería Vollmer - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-vollmer-2.webp" alt="Panadería Vollmer - foto 2" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Panadería Vollmer</h3>
+        </figcaption>
+      </article>
+
+      <!-- LOCAL: Puerkos Restaurant -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-puerkos1-1.webp" alt="Puerkos Restaurant - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/cli-puerkos2-1.webp" alt="Puerkos Restaurant - foto 2" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Puerkos Restaurant (El Paraíso y Av. Casanova)</h3>
+        </figcaption>
+      </article>
+
+      <!-- OBRA: Baños de local comercial -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/obra-banos-local-1.webp" alt="Baños de local comercial - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-banos-local-2.webp" alt="Baños de local comercial - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-banos-local-3.webp" alt="Baños de local comercial - foto 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-banos-local-4.webp" alt="Baños de local comercial - foto 4" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Baños de local comercial</h3>
+        </figcaption>
+      </article>
+
+      <!-- OBRA: Cocina con isla -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/obra-cocina-isla-1.webp" alt="Cocina con isla - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-cocina-isla-2.webp" alt="Cocina con isla - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-cocina-isla-3.webp" alt="Cocina con isla - foto 3" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Cocina con isla</h3>
+        </figcaption>
+      </article>
+
+      <!-- OBRA: Baño completo con ducha -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/obra-bano-ducha-1.webp" alt="Baño completo con ducha - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-bano-ducha-2.webp" alt="Baño completo con ducha - foto 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-bano-ducha-3.webp" alt="Baño completo con ducha - foto 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-bano-ducha-4.webp" alt="Baño completo con ducha - foto 4" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-bano-ducha-5.webp" alt="Baño completo con ducha - foto 5" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Baño completo con ducha</h3>
+        </figcaption>
+      </article>
+
+      <!-- OBRA: Diez 20 Deli Café -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/cli-diez20-1.webp" alt="Diez 20 Deli Café - foto 1" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Diez 20 Deli Café</h3>
+        </figcaption>
+      </article>
+
+      <!-- OBRA: Escalera con baranda de vidrio -->
+      <article class="project-card">
+        <div class="project-carousel" data-interval="2500">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/obra-escalera-1.webp" alt="Escalera con baranda de vidrio - foto 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/obra-escalera-2.webp" alt="Escalera con baranda de vidrio - foto 2" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <figcaption>
+          <h3>Escalera con baranda de vidrio</h3>
+        </figcaption>
+      </article>
+
+      
+    </div>
     </div>
   </div>
 </section>
 <section class="testimonials" id="testimonios">
   <div class="container">
-    <header class="section-head section-head--light">
-      <span class="section-head__num">05</span>
-      <h2>Lo que dicen nuestros clientes</h2>
+    <header class="section-head">
+      <h2>Nuestros clientes</h2>
+      <p>Cafés, restaurantes y panaderías que remodelamos. Tocá cada uno para conocerlo.</p>
     </header>
-
-    <div class="testimonials__grid">
-      <blockquote class="testimonial">
-        <p>"Vinieron el mismo día por una pérdida de agua y quedó todo perfecto. Muy prolijos."</p>
-        <cite>— Cliente, remodelación de baño</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>"El presupuesto fue exactamente lo que terminamos pagando. Se nota la experiencia."</p>
-        <cite>— Cliente, ampliación de vivienda</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>"Instalación eléctrica completa, con certificado y todo en regla. Recomendables."</p>
-        <cite>— Cliente, instalación eléctrica</cite>
-      </blockquote>
+    <div class="clients__slider">
+      <button class="slider-arrow slider-arrow--prev" id="cliPrev" aria-label="Clientes anteriores">‹</button>
+      <button class="slider-arrow slider-arrow--next" id="cliNext" aria-label="Clientes siguientes">›</button>
+    <div class="clients__grid" id="cliGrid">
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-symphony-1.webp" alt="Symphony Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-symphony-2.webp" alt="Symphony Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-symphony-3.webp" alt="Symphony Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-symphony-4.webp" alt="Symphony Deli Café" loading="lazy"></div></div><div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Deli Café</span>
+          <h3>Symphony Deli Café</h3>
+          <p>Café y deli. Remodelamos el local para que sea un espacio cómodo y atractivo para sus clientes.</p>
+          <a class="client-card__link" href="https://share.google/quHqFRpE9brfO8VhD" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-puerkos1-1.webp" alt="Puerkos Restaurant" loading="lazy"></div></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Restaurante</span>
+          <h3>Puerkos Restaurant · Av. Casanova</h3>
+          <p>Sucursal de Av. Casanova. Remodelamos el local con terminaciones pensadas para el uso diario.</p>
+          <a class="client-card__link" href="https://share.google/nYWhhINCgwbAMEqS9" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-puerkos2-1.webp" alt="Puerkos Restaurant" loading="lazy"></div></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Restaurante</span>
+          <h3>Puerkos Restaurant · El Paraíso</h3>
+          <p>Sucursal de El Paraíso. Remodelamos el local con el mismo estándar de terminación.</p>
+          <a class="client-card__link" href="https://share.google/O84UvvGDBK40UafhU" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-moka-1.webp" alt="Moka Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-moka-2.webp" alt="Moka Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-moka-3.webp" alt="Moka Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-moka-4.webp" alt="Moka Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-moka-5.webp" alt="Moka Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-moka-6.webp" alt="Moka Deli Café" loading="lazy"></div></div><div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Deli Café</span>
+          <h3>Moka Deli Café</h3>
+          <p>Café y deli. Remodelación del local con un ambiente cálido y prolijo.</p>
+          <a class="client-card__link" href="https://share.google/gZ9uO0YvUTRXYMQxw" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="client-card__media client-card__media--empty"><svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Deli Café</span>
+          <h3>Moka Deli Café · La Urbina</h3>
+          <p>Sucursal de La Urbina. Remodelación del local con un ambiente cálido y prolijo.</p>
+          <a class="client-card__link" href="https://share.google/1ls50OndD2g5yTU0E" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-vollmer-1.webp" alt="Panadería Vollmer" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-vollmer-2.webp" alt="Panadería Vollmer" loading="lazy"></div></div><div class="carousel-dots"><span class="dot active"></span><span class="dot"></span></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Panadería</span>
+          <h3>Panadería Vollmer</h3>
+          <p>Panadería y comida rápida. Remodelamos el local para que la atención y la exhibición de productos sean más cómodas.</p>
+          <a class="client-card__link" href="https://share.google/LZ9tL7IgYBK7ZTs8v" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-diez20-1.webp" alt="Diez 20 Deli Café" loading="lazy"></div></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Deli Café</span>
+          <h3>Diez 20 Deli Café</h3>
+          <p>Café y deli. Remodelación completa del local, entregada lista para atender.</p>
+          <a class="client-card__link" href="https://share.google/fQLuiHwk1IvOaF0RF" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+      <article class="client-card">
+        <div class="project-carousel client-card__media" data-interval="2500"><div class="carousel-track"><div class="carousel-slide active"><img src="images/cli-chocolat-1.webp" alt="Chocolat Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-chocolat-2.webp" alt="Chocolat Deli Café" loading="lazy"></div><div class="carousel-slide"><img src="images/cli-chocolat-3.webp" alt="Chocolat Deli Café" loading="lazy"></div></div><div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div></div>
+        <div class="client-card__body">
+          <span class="client-card__tag">Deli Café</span>
+          <h3>Chocolat Deli Café</h3>
+          <p>Café y deli. Remodelamos el local con terminaciones cuidadas y un ambiente agradable.</p>
+          <a class="client-card__link" href="https://share.google/CozHXNqvKxig6CZW8" target="_blank" rel="noopener">Ver en Google →</a>
+        </div>
+      </article>
+    </div>
     </div>
   </div>
 </section>
@@ -478,19 +889,16 @@
 <section class="contact" id="contacto">
   <div class="container contact__inner">
     <div class="contact__info">
-      <span class="section-head__num">06</span>
       <h2>Pedí tu presupuesto</h2>
       <p>Contanos qué necesitás y te respondemos con un presupuesto detallado, sin cargo.</p>
 
+      <div class="wa-buttons">
+        <a class="wa-btn" href="https://wa.me/584241164827" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.36-.77-1.86-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.42.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29Z"/></svg><span><small>WhatsApp Venezuela</small>+58 424 116 4827</span></a>
+        <a class="wa-btn" href="https://wa.me/584241236167" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.36-.77-1.86-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.42.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29Z"/></svg><span><small>WhatsApp Venezuela</small>+58 424 123 6167</span></a>
+        <a class="wa-btn" href="https://wa.me/5491171229489" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.36-.77-1.86-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.42.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29Z"/></svg><span><small>WhatsApp Argentina</small>+54 9 11 7122-9489</span></a>
+      </div>
+
       <ul class="contact__list">
-        <li>
-          <strong>WhatsApp Venezuela</strong>
-          <a href="https://wa.me/584241164827" target="_blank" rel="noopener">+58 424 116 4827</a>
-        </li>
-        <li>
-          <strong>WhatsApp Argentina</strong>
-          <a href="https://wa.me/5491171229489" target="_blank" rel="noopener">+54 9 11 7122-9489</a>
-        </li>
         <li>
           <strong>Email</strong>
           <a href="mailto:afjconstruccionesg@gmail.com">afjconstruccionesg@gmail.com</a>
@@ -522,10 +930,11 @@
         <label for="servicio">Servicio que necesitás</label>
         <select id="servicio" name="servicio" required>
           <option value="" disabled selected>Elegí una opción</option>
-          <option value="construccion">Construcción</option>
+          <option value="revestimientos">Revestimientos</option>
           <option value="remodelacion">Remodelaciones</option>
-          <option value="destapado">Destapado de cañerías</option>
+          <option value="plomeria">Plomería</option>
           <option value="electricidad">Electricidad</option>
+          <option value="cielorraso">Cielorrasos y Drywall</option>
           <option value="otro">Otro</option>
         </select>
       </div>
@@ -543,7 +952,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="images/logo-blanco.png" alt="AFJ Construcciones" class="footer__logo">
+      <img src="images/logo-blanco-puro.png" alt="AFJ Construcciones" class="footer__logo">
       <p>Construcción, remodelaciones, plomería y electricidad.</p>
     </div>
     <nav class="footer__nav">
@@ -564,6 +973,13 @@
       <span>
         <strong>Venezuela</strong>
         <small>+58 424 116 4827</small>
+      </span>
+    </a>
+    <a href="https://wa.me/584241236167" target="_blank" rel="noopener" class="wa-float__option">
+      <span class="wa-float__flag">🇻🇪</span>
+      <span>
+        <strong>Venezuela</strong>
+        <small>+58 424 123 6167</small>
       </span>
     </a>
     <a href="https://wa.me/5491171229489" target="_blank" rel="noopener" class="wa-float__option">

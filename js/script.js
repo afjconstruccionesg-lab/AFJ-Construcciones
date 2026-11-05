@@ -42,6 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
       waBtn.setAttribute('aria-expanded', isOpen);
     });
 
+    document.querySelectorAll('.js-wa-open').forEach((b) => {
+      b.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        waFloat.classList.add('is-open');
+        waBtn.setAttribute('aria-expanded', 'true');
+      });
+    });
+
     document.addEventListener('click', (e) => {
       if (!waFloat.contains(e.target)) {
         waFloat.classList.remove('is-open');
@@ -151,3 +160,62 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ==========================================
+// HERO: carrusel de fondo (3 s)
+// ==========================================
+(function(){
+  const slides = document.querySelectorAll('.hero__slide');
+  const dots = document.querySelectorAll('#heroDots span');
+  if (slides.length < 2) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('active'); dots[i] && dots[i].classList.remove('active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('active'); dots[i] && dots[i].classList.add('active');
+  }, 3000);
+})();
+
+
+// ==========================================
+// CARRUSELES INFINITOS (obras y clientes)
+// ==========================================
+(function(){
+  function makeInfinite(gridId, prevId, nextId, gap){
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    const originals = Array.from(grid.children);
+    const n = originals.length;
+    if (n < 2) return;
+    // 3 copias: [clones][originales][clones]
+    originals.forEach(c => { const k = c.cloneNode(true); k.setAttribute('aria-hidden','true'); grid.insertBefore(k, originals[0]); });
+    originals.forEach(c => { const k = c.cloneNode(true); k.setAttribute('aria-hidden','true'); grid.appendChild(k); });
+    const cards = Array.from(grid.children);
+    const setW = () => cards[n].offsetLeft - cards[0].offsetLeft;
+    const stepW = () => cards[1].offsetLeft - cards[0].offsetLeft;
+    function jump(delta){
+      const prev = grid.style.scrollSnapType, beh = grid.style.scrollBehavior;
+      grid.style.scrollSnapType = 'none'; grid.style.scrollBehavior = 'auto';
+      grid.scrollLeft += delta;
+      grid.style.scrollSnapType = prev; grid.style.scrollBehavior = beh;
+    }
+    function init(){ jump(setW() - grid.scrollLeft); }
+    let t;
+    grid.addEventListener('scroll', () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        const w = setW();
+        if (grid.scrollLeft >= 2*w - 2) jump(-w);
+        else if (grid.scrollLeft <= w - stepW() * 0.5 - 2 && grid.scrollLeft < w) jump(w);
+      }, 120);
+    }, { passive: true });
+    document.getElementById(prevId)?.addEventListener('click', () => grid.scrollBy({ left: -stepW(), behavior: 'smooth' }));
+    document.getElementById(nextId)?.addEventListener('click', () => grid.scrollBy({ left: stepW(), behavior: 'smooth' }));
+    window.addEventListener('load', init);
+    window.addEventListener('resize', init);
+    init();
+  }
+  makeInfinite('projGrid', 'projPrev', 'projNext', 24);
+  makeInfinite('cliGrid', 'cliPrev', 'cliNext', 20);
+})();
