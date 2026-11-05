@@ -1161,3 +1161,26 @@ h1,h2,h3,h4{ font-weight:500; letter-spacing:.01em; }
   .projects__slider .project-card{ flex:0 0 85%; }
   .project-card__title, .project-card h3{ padding-left:2px; }
 }
+
+/* ===== Cinta rodante ===== */
+.marquee{ overflow:hidden; background:linear-gradient(90deg,var(--acento-osc),var(--acento)); padding:20px 0; }
+.marquee__track{ display:flex; width:max-content; align-items:center; animation:mq 40s linear infinite; }
+.marquee:hover .marquee__track{ animation-play-state:paused; }
+@keyframes mq{ to{ transform:translateX(-25%); } }
+.marquee span{ color:#fff; font-weight:500; font-size:1.25rem; letter-spacing:.14em; text-transform:uppercase; padding:0 30px; white-space:nowrap; }
+.marquee i{ width:10px; height:10px; background:#fff; transform:rotate(45deg); border-radius:2px; opacity:.7; flex:none; }
+@media (max-width:640px){ .marquee span{ font-size:1rem; padding:0 20px; } .marquee__track{ animation-duration:28s; } }
+@media (prefers-reduced-motion:reduce){ .marquee__track{ animation:none; } }
+
+/* ===== Transición hero ===== */
+.hero__slide{ transition:opacity 1.3s ease; }
+.hero__slide img{ transform:scale(1.14); transition:transform 7s ease-out; }
+.hero__slide.active img{ transform:scale(1); }
+.hero__overlay{ background:linear-gradient(100deg,rgba(13,27,52,.78) 0%,rgba(29,68,154,.38) 55%,rgba(0,0,0,.12) 100%) !important; }
+.hero__dots span{ position:relative; overflow:hidden; width:44px; }
+.hero__dots span.active::after{ content:""; position:absolute; inset:0; background:#fff; transform-origin:left; animation:dotfill 3s linear forwards; border-radius:inherit; }
+.hero__dots span.active{ background:rgba(255,255,255,.35); }
+@keyframes dotfill{ from{ transform:scaleX(0);} to{ transform:scaleX(1);} }
+.hero__title,.hero__subtitle,.hero__cta,.hero__eyebrow{ animation:heroin .9s ease both; }
+.hero__title{ animation-delay:.15s; } .hero__subtitle{ animation-delay:.3s; } .hero__cta{ animation-delay:.45s; }
+@keyframes heroin{ from{ opacity:0; transform:translateY(22px);} to{ opacity:1; transform:none;} }
