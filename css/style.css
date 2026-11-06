@@ -1215,3 +1215,17 @@ h1,h2,h3,h4{ font-weight:500; letter-spacing:.01em; }
   color:var(--acento-osc); -webkit-text-stroke:0; font-size:2.8rem; }
 @media (max-width:640px){ .marquee span, .marquee .f1,.marquee .f2,.marquee .f3,.marquee .f4,.marquee .f5,.marquee .f6,.marquee .f7{ font-size:1.5rem; } }
 .btn--wa{ white-space:nowrap; }
+
+/* Contacto con íconos */
+.contact__list--icons li{ display:flex; align-items:center; gap:16px; padding:16px 0; }
+.contact__list--icons li > div{ display:flex; flex-direction:column; gap:2px; }
+.ci{ flex:none; width:48px; height:48px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--acento); }
+.ci svg{ width:24px; height:24px; }
+.ci--mail{ background:var(--acento-osc); }
+.ci--pin{ background:var(--acento); }
+.ci--ig{ background:linear-gradient(45deg,#F9B947 0%,#EE2A7B 45%,#6228D7 100%); }
+.contact__list--icons a{ font-weight:500; }
+.footer__ig{ display:inline-flex; align-items:center; gap:6px; }
+.footer__ig svg{ width:18px; height:18px; }
+.contact__list--icons li{ flex-direction:row !important; align-items:center !important; justify-content:flex-start !important; text-align:left; }
+.contact__list--icons li > div{ align-items:flex-start; }
