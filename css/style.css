@@ -1214,3 +1214,4 @@ h1,h2,h3,h4{ font-weight:500; letter-spacing:.01em; }
   font-family:'Roboto Slab',Georgia,serif; font-weight:800; font-style:normal; text-transform:uppercase; letter-spacing:.02em;
   color:var(--acento-osc); -webkit-text-stroke:0; font-size:2.8rem; }
 @media (max-width:640px){ .marquee span, .marquee .f1,.marquee .f2,.marquee .f3,.marquee .f4,.marquee .f5,.marquee .f6,.marquee .f7{ font-size:1.5rem; } }
+.btn--wa{ white-space:nowrap; }
