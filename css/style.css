@@ -1229,3 +1229,12 @@ h1,h2,h3,h4{ font-weight:500; letter-spacing:.01em; }
 .footer__ig svg{ width:18px; height:18px; }
 .contact__list--icons li{ flex-direction:row !important; align-items:center !important; justify-content:flex-start !important; text-align:left; }
 .contact__list--icons li > div{ align-items:flex-start; }
+
+/* ===== Hero con video ===== */
+.hero__video{ width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block; }
+.hero__dots{ display:none; }
+.hero__overlay{ background:linear-gradient(100deg,rgba(13,27,52,.80) 0%,rgba(13,27,52,.55) 50%,rgba(13,27,52,.25) 100%) !important; }
+@media (max-width:640px){
+  .hero__video{ object-position:42% 50%; }
+  .hero__overlay{ background:linear-gradient(180deg,rgba(13,27,52,.55) 0%,rgba(13,27,52,.62) 55%,rgba(13,27,52,.78) 100%) !important; }
+}

@@ -32,7 +32,7 @@
 
 <!-- Google Fonts -->
 <link rel="preload" href="fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=1793992392">
+<link rel="stylesheet" href="css/style.css?v=1793996574">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -64,10 +64,9 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
   <div class="hero__slides" aria-hidden="true">
-    <picture class="hero__slide active"><source media="(max-width:640px)" srcset="images/hero-1-m.webp"><img src="images/hero-1.webp" alt="" fetchpriority="high"></picture>
-    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-2-m.webp"><img src="images/hero-2.webp" alt="" loading="lazy"></picture>
-    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-3-m.webp"><img src="images/hero-3.webp" alt="" loading="lazy"></picture>
-    <picture class="hero__slide"><source media="(max-width:640px)" srcset="images/hero-4-m.webp"><img src="images/hero-4.webp" alt="" loading="lazy"></picture>
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.webp" disablepictureinpicture>
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="hero__overlay"></div>
   <div class="container hero__inner">
@@ -92,7 +91,6 @@
       <div class="hero__stat"><dt>24 h</dt><dd>respuesta a urgencias</dd></div>
     </dl>
   </div>
-  <div class="hero__dots" id="heroDots"><span class="active"></span><span></span><span></span><span></span></div>
 </section>
 
 <!-- ============ QUIÉNES SOMOS ============ -->
@@ -1004,6 +1002,6 @@
   </button>
 </div>
 
-<script src="js/script.js?v=1793987645"></script>
+<script src="js/script.js?v=1793996574"></script>
 </body>
 </html>

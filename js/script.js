@@ -162,19 +162,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// HERO: carrusel de fondo (3 s)
+// HERO: video de fondo
 // ==========================================
 (function(){
-  const slides = document.querySelectorAll('.hero__slide');
-  const dots = document.querySelectorAll('#heroDots span');
-  if (slides.length < 2) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  let i = 0;
-  setInterval(() => {
-    slides[i].classList.remove('active'); dots[i] && dots[i].classList.remove('active');
-    i = (i + 1) % slides.length;
-    slides[i].classList.add('active'); dots[i] && dots[i].classList.add('active');
-  }, 3000);
+  const v = document.getElementById('heroVideo');
+  if (!v) return;
+  if (window.innerWidth >= 1400) {
+    const s = v.querySelector('source'); s.src = 'video/hero-hd.mp4'; v.load();
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); return; }
+  const p = v.play(); if (p && p.catch) p.catch(()=>{});
 })();
 
 
